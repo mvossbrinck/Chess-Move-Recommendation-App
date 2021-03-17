@@ -9,7 +9,7 @@
      font-size: 28pt;
    }
    .suggested-next-move {
-     color: #48abdb;
+     color: #006a4e;
    }
  </style>
 
@@ -32,21 +32,28 @@
       </div>
       <div class="col-lg-6">
         <br>
+        <h3 style="text-align:left"> Player Selection:</h3>
+        <input type="button" value = "White" class="user btn color-button btn-light btn-lg" data-name="White">
+        <input type="button" value = "Black" class="user btn color-button btn-dark btn-lg" data-name="Black">
         <br>
         <br>
         <br>
-        <h3 style="text-align:left"> Board Options:</h3>
-        <button id="startBtn" class="btn btn-primary">Set To Start Position</button>
-        <button id="clearBtn" class="btn btn-primary">Clear Board</button>
+        <h3 style="text-align:left"> Board Settings:</h3>
+        <button id="startBtn" class="btn btn-primary btn-lg">Set To Start Position</button>
+        <button id="clearBtn" class="btn btn-primary btn-lg">Clear Board</button>
         <br>
         <br>
         <br>
         <h3 style="text-align:left"> Algorithm Options:</h3>
-        <button data-algorithm="Random Move" class="showPositionBtn btn btn-secondary">Pick Random Move</button>
-        <button data-algorithm="Min Max" class="showPositionBtn btn btn-secondary">Use Min Max Algorithm</button>
+        <button data-algorithm="Random Move" class="showPositionBtn btn btn-secondary btn-lg">Pick Random Move</button>
+        <button data-algorithm="Min Max" class="showPositionBtn btn btn-secondary btn-lg">Use Min Max Algorithm</button>
         <br><br><br>
         <div class="hidden" id="results-container">
-          <p class="suggested-next-move-wrapper">Your Recommended Move Is: <span class="suggested-next-move"></span> <br> Selected Algorithm: <span class="algorithm-choice"></span></p>
+          <p class="suggested-next-move-wrapper">Your Recommended Move Is:
+            <span class="suggested-next-move"></span> <br>
+            Selected Algorithm: <span class="algorithm-choice"></span>
+            <br> Player: <span id="insert"></span>
+          </p>
         </div>
       </div>
    </div>
@@ -66,14 +73,21 @@
 
    var board2 = Chessboard('board2', config)
 
-   var board_position = board2.fen()
+   var user = 'White';
+   $(".user").click(function() {
+          user = $(this).attr("data-name");
+          player = user.toLowerCase().substr(0,1);
+          document.getElementById("insert").innerHTML = user;
+       });
 
-
-  // document.getElementById('boardfen').value = board2.fen()
 
    function clickShowPositionBtn () {
+
+     var currentPosition = board2.fen() + ' ' + player
+
+
      console.log('Current position as a FEN string:')
-     console.log(board2.fen())
+     console.log(currentPosition)
 
      fetch("/nextmove", {
         method: "post",
@@ -83,8 +97,8 @@
         },
         //make sure to serialize your JSON body
         body: JSON.stringify({
-          currentBoardPosition: board2.fen(),
-          algorithm: this.dataset.algorithm
+          currentBoardPosition: currentPosition,
+          algorithm: this.dataset.algorithm,
         })
       })
       .then(response => response.json())
@@ -95,12 +109,13 @@
       });
    }
 
-   function docWrite(variable) {
-    document.write(variable);
-   }
+  function clearRecommendation() {
+    $('#results-container').addClass("hidden");
+  }
 
    $('#startBtn').on('click', board2.start)
    $('#clearBtn').on('click', board2.clear)
+   $('.color-button').on('click', clearRecommendation)
    $('.showPositionBtn').on('click', clickShowPositionBtn)
 
 
