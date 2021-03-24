@@ -1,12 +1,14 @@
 import chess
 
-def blackScore(fen_input):
+def black_pieces_score(fen_input):
+
+    # Standard valuations for pieces other than king according to Wikipedia
     piece_values = {
         chess.PAWN: 100,
-        chess.ROOK: 563,
-        chess.KNIGHT: 305,
-        chess.BISHOP: 333,
-        chess.QUEEN: 950,
+        chess.ROOK: 500,
+        chess.KNIGHT: 300,
+        chess.BISHOP: 300,
+        chess.QUEEN: 900,
         chess.KING: 50000
         }
 
