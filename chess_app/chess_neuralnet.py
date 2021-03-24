@@ -44,7 +44,7 @@ chess_dict = {
 }
 
 def evaluate(fen):
-    loaded_model = load_model('chessb4.14-0.27.hdf5')
+    loaded_model = load_model('models/chessb4.14-0.27.hdf5')
     lst = []
     board = chess.Board(fen)
     for move in board.legal_moves:
