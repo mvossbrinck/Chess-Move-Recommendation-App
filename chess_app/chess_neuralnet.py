@@ -44,11 +44,7 @@ chess_dict = {
 }
 
 def evaluate(fen):
-    json_file = open('chess_best_model.json', 'r')
-    loaded_model_json = json_file.read()
-    json_file.close()
-    loaded_model = model_from_json(loaded_model_json)
-    loaded_model.load_weights("chess_best_model.h5")
+    loaded_model = load_model('chessb4.14-0.27.hdf5')
     lst = []
     board = chess.Board(fen)
     for move in board.legal_moves:
