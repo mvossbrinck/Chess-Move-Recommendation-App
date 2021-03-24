@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 from chess_random import get_random_move
-from chess_minimax2 import get_minimax_move
+from chess_minimax import get_minimax_move
 from chess_neuralnet import get_NN_move
 
 app = Flask(__name__)

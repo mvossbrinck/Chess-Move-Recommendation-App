@@ -2,11 +2,11 @@ import chess
 import numpy as np
 from evaluate_white import evaluate_white
 
-def minimax_white(fen_input, move, alpha, beta, depth = 2):
+def minimax_white(fen_input, move, alpha, beta, depth = 10):
     board = chess.Board(fen_input)
     if depth == 0 or board.is_game_over():
         return move, evaluate_white(fen_input)
-    if board.turn:
+    if board.turn == 1:
         best_move = None
         best_score = -float('inf')
         for move in board.legal_moves:

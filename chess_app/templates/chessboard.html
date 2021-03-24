@@ -32,17 +32,17 @@
       </div>
       <div class="col-lg-6">
         <br>
-        <h3 style="text-align:left"> Player Selection:</h3>
-        <input type="button" value = "White" class="user btn color-button btn-light btn-lg" data-name="White">
-        <input type="button" value = "Black" class="user btn color-button btn-dark btn-lg" data-name="Black">
-        <br><br><br>
         <h3 style="text-align:left"> Board Settings:</h3>
         <button id="startBtn" class="btn btn-primary btn-lg">Set To Start Position</button>
         <button id="clearBtn" class="btn btn-primary btn-lg">Clear Board</button>
         <br><br><br>
-        <h3 style="text-align:left"> Algorithm Options:</h3>
+        <h3 style="text-align:left"> Player Selection:</h3>
+        <input type="button" value = "White" class="user btn color-button btn-light btn-lg" data-name="White">
+        <input type="button" value = "Black" class="user btn color-button btn-dark btn-lg" data-name="Black">
+        <br><br><br>
+        <h3 style="text-align:left"> Recommendation Options:</h3>
         <button data-algorithm="Random Move" class="showPositionBtn btn btn-secondary btn-lg">Random</button>
-        <button data-algorithm="Min Max" class="showPositionBtn btn btn-secondary btn-lg">Min Max</button>
+        <button data-algorithm="Min Max" class="showPositionBtn btn btn-secondary btn-lg">Minimax</button>
         <button data-algorithm="Neural Network" class="showPositionBtn btn btn-secondary btn-lg">Neural Network</button>
         <br><br><br>
         <div class="hidden" id="results-container">
@@ -69,7 +69,7 @@
   }
 
    var board2 = Chessboard('board2', config)
-   
+
    var user = 'White';
    $(".user").click(function() {
           user = $(this).attr("data-name");
