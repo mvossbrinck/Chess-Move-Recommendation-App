@@ -26,17 +26,17 @@
 * Expert Data Set Creation.ipynb
 * Neural Net Data Set Creation.ipynb
 * elo.svg
-#### /chess_app
-* chess_app.py
-* chess_minimax.py
-* chess_neuralnet.py
-* chess_random.py
-* evaluate_board.py
-* Evaluate Random Moves and Minimax Algorithm.ipynb
-* /models: 
-* /static/css/chessboard-1.0.0.min.css: 
-* /static/chesspieces/wikipedia: Folder containing piece images used for chessboard
-* /templates/chessboard.html: HTML, Javascript, and CSS code for app template
+#### chess_app Folder
+* __chess_app.py__: Flask app code with the three recommenders
+* __chess_minimax.py__: Functions to run minimax algorithm for a chessboard configuration
+* __chess_neuralnet.py__: Functions to run neural net prediction for a chessboard configuration
+* __chess_random.py__: Function that provides a random legal move for a chessboard configuration
+* __evaluate_board.py__: Functions to assess chessboard configurations based on piece values 
+* __Evaluate Random Moves and Minimax Algorithm.ipynb__: Code to check how well random and minimax moves compared to moves in expert data set
+* __/models__: Folder of resulting convolutional neural net models
+* __/static/css/chessboard-1.0.0.min.css__: CSS file adapted from chessboardjs documentation to change board colors
+* __/static/chesspieces/wikipedia__: Folder containing piece images used for chessboard
+* __/templates/chessboard.html__: HTML, Javascript, and CSS code for app template
 &nbsp;
 
 ### Evaluation and Conclusions
