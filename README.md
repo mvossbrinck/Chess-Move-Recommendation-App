@@ -2,20 +2,20 @@
 
 ### Description
 #### This repository contains all the code I used to build out and assess different chess recommendation functions. It also contains code for utilizing the recommendation functions in a Flask app where a custom chess configuration can be inputted. The app has been deployed to Heroku and can be found here: 
-&nbsp;
+<br>
 
 ### Background
 #### Chess is a popular game worldwide. One of the most popular chess websites, Chess.com, has over 60 million members. Therefore, I thought that an app which could provide chess move recommendations could have a potentially large user base. I used a minimax algorithm with alpha beta pruning as a baseline recommender, and a convolutional neural network model as a means to improve upon that recommendation.
-&nbsp;
+<br>
 
 ### Data Used
 #### Lichess Open Database August and September 2014 Data https://database.lichess.org/
-&nbsp;
+<br>
 
 ### Tools Used
 #### Python: Pandas, NumPy, Chess, Matplotlib, Keras, Tensorflow
 #### Other: Flask, HTML, Javascript, CSS, Heroku
-&nbsp;
+<br>
 
 ### File List
 #### Main Folder
@@ -37,7 +37,6 @@
 * __/static/css/chessboard-1.0.0.min.css__: CSS file adapted from chessboardjs documentation to change board colors
 * __/static/chesspieces/wikipedia__: Folder containing piece images used for chessboard
 * __/templates/chessboard.html__: HTML, Javascript, and CSS code for app template
-<br>
 <br>
 
 ### Evaluation and Conclusions
