@@ -18,12 +18,25 @@
 &nbsp;
 
 ### File List
-#### 
-#### 
-#### 
-#### 
-#### 
-#### 
+#### Main Folder
+* Chess App Presentation - Metis Final Project.pdf
+* Convolutional_Neural_Network_Models.ipynb
+* Create Histogram.ipynb
+* Evaluate Neural Network Models.ipynb
+* Expert Data Set Creation.ipynb
+* Neural Net Data Set Creation.ipynb
+* elo.svg
+#### /chess_app
+* chess_app.py
+* chess_minimax.py
+* chess_neuralnet.py
+* chess_random.py
+* evaluate_board.py
+* Evaluate Random Moves and Minimax Algorithm.ipynb
+* /models: 
+* /static/css/chessboard-1.0.0.min.css: 
+* /static/chesspieces/wikipedia: Folder containing piece images used for chessboard
+* /templates/chessboard.html: HTML, Javascript, and CSS code for app template
 &nbsp;
 
 ### Evaluation and Conclusions
