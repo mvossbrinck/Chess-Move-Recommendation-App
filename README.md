@@ -19,24 +19,25 @@
 
 ### File List
 #### Main Folder
-* Chess App Presentation - Metis Final Project.pdf
-* Convolutional_Neural_Network_Models.ipynb
-* Create Histogram.ipynb
-* Evaluate Neural Network Models.ipynb
-* Expert Data Set Creation.ipynb
-* Neural Net Data Set Creation.ipynb
-* elo.svg
+* __Chess App Presentation - Metis Final Project.pdf__: Slides from final presentation
+* __Neural Net Data Set Creation.ipynb__: Cleans and filters data set that will be used in the neural network models
+* __Expert Data Set Creation.ipynb__: Cleans and filters the data set that will be used for evaluation of the different recommenders
+* __Convolutional Neural Network Models.ipynb__: Convolutional neural network models that were run
+* __Evaluate Neural Network Models.ipynb__: Code to evaluate how well neural net predicted moves compared to moves in the expert data set
+* __Create Histogram.ipynb__: Code to create histogram of the difference between the Elo ratings of the two players in each game
+* __elo.svg__: Histogram of the difference between the Elo ratings of the two players in each game
 #### chess_app Folder
 * __chess_app.py__: Flask app code with the three recommenders
 * __chess_minimax.py__: Functions to run minimax algorithm for a chessboard configuration
 * __chess_neuralnet.py__: Functions to run neural net prediction for a chessboard configuration
 * __chess_random.py__: Function that provides a random legal move for a chessboard configuration
 * __evaluate_board.py__: Functions to assess chessboard configurations based on piece values 
-* __Evaluate Random Moves and Minimax Algorithm.ipynb__: Code to check how well random and minimax moves compared to moves in expert data set
+* __Evaluate Random Moves and Minimax Algorithm.ipynb__: Code to evaluate how well random and minimax moves compared to moves in the expert data set
 * __/models__: Folder of resulting convolutional neural net models
 * __/static/css/chessboard-1.0.0.min.css__: CSS file adapted from chessboardjs documentation to change board colors
 * __/static/chesspieces/wikipedia__: Folder containing piece images used for chessboard
 * __/templates/chessboard.html__: HTML, Javascript, and CSS code for app template
+&nbsp;
 &nbsp;
 
 ### Evaluation and Conclusions
