@@ -37,8 +37,8 @@
 * __/static/css/chessboard-1.0.0.min.css__: CSS file adapted from chessboardjs documentation to change board colors
 * __/static/chesspieces/wikipedia__: Folder containing piece images used for chessboard
 * __/templates/chessboard.html__: HTML, Javascript, and CSS code for app template
-&nbsp;
-&nbsp;
+<br>
+<br>
 
 ### Evaluation and Conclusions
 #### To evaluate how well each of my recommenders worked, I compared the recommended next moves to the actual next moves of chess players with Elo ratings of 2400. I found that my minimax algorithm performed about the same as choosing a move randomly, which was about 6% of moves matched. There are definitely improvements that I should make to the minimax algorithm that I used. The convolutional neural net model did perform better, with about 9% of moves matched. While better than the baseline recommender, there is still a lot of room for improvement. 
