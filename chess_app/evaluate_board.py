@@ -2,6 +2,7 @@ import chess
 import numpy as np
 
 
+# Function to get score for just white pieces
 def white_pieces_score(fen_input):
 
     # Standard valuations for pieces other than king according to Wikipedia
@@ -27,6 +28,7 @@ def white_pieces_score(fen_input):
     return white_score
 
 
+# Function to get score for just black pieces
 def black_pieces_score(fen_input):
 
     # Standard valuations for pieces other than king according to Wikipedia
@@ -52,9 +54,11 @@ def black_pieces_score(fen_input):
     return black_score
 
 
+# Function to evaluate the board for white player
 def white_score_eval(fen_input):
     return white_pieces_score(fen_input) - black_pieces_score(fen_input)
 
 
+# Function to evaluate the board for black player
 def black_score_eval(fen_input):
     return black_pieces_score(fen_input) - white_pieces_score(fen_input)

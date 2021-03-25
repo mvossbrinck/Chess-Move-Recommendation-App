@@ -2,6 +2,11 @@ import chess
 from keras.models import Sequential, load_model, model_from_json
 
 
+# Code for functions either directly obtained or based on code from
+# https://towardsdatascience.com/creating-a-chess-engine-with-deep-learning-b9477ff3ee3d
+
+
+# Matrix formatting function
 def make_matrix(board):
     pgn = board.epd()
     foo = []
@@ -18,6 +23,8 @@ def make_matrix(board):
         foo.append(foo2)
     return foo
 
+
+# Translate to correct format using chess dict
 def translate(matrix,chess_dict):
     rows = []
     for row in matrix:
@@ -27,6 +34,8 @@ def translate(matrix,chess_dict):
         rows.append(terms)
     return rows
 
+
+# Chess dictionary needed for function
 chess_dict = {
     'p' : [1,0,0,0,0,0,0,0,0,0,0,0],
     'P' : [0,0,0,0,0,0,1,0,0,0,0,0],
@@ -43,6 +52,8 @@ chess_dict = {
     '.' : [0,0,0,0,0,0,0,0,0,0,0,0],
 }
 
+
+# Evaluate each legal move using neural net model
 def evaluate(fen):
     loaded_model = load_model('models/chessb4.14-0.27.hdf5')
     lst = []
@@ -58,6 +69,8 @@ def evaluate(fen):
             lst.append(item)
     return lst
 
+
+# Find neural net move with highest value
 def get_NN_move(fen):
     evaluation = evaluate(fen)
     maximum = -1
