@@ -1,7 +1,7 @@
 ## Chess Move Recommendation App
 
 ### Description
-#### This repository contains all the code I used to build out and assess different chess recommendation functions. It also contains code for utilizing the recommendation functions in a Flask app where a custom chess configuration can be inputted. The app has been deployed to Heroku and can be found here: 
+#### This repository contains all the code I used to build out and assess different chess recommendation functions. It also contains code for utilizing the recommendation functions in a Flask app where a custom chess configuration can be inputted. The app has been deployed to Heroku and can be found here: https://next-chess-move.herokuapp.com/
 <br>
 
 ### Background
